@@ -1,0 +1,73 @@
+=================================================
+TODAS OS CAMPOS SERÃO EM MINÚSCULO E CAMELCASE.
+=================================================
+
+ - Login:
+{
+	"action": "login",
+	"nome": "name1"
+}
+
+ - Logout:
+{
+	"action": "logout"
+}
+
+ - Lista de Usuários:
+{
+	"action": "listarUsuarios",
+	"usuarios": [
+		{
+			"nome": "sad",
+			"ip": "10.10.10.10",
+			"porta": 22000
+		},
+		{
+			"nome": "sad",
+			"ip": "10.10.10.10",
+			"porta": 22000
+		}
+	]
+}
+
+- Listar Serviços
+{
+	"action": "listarServicos",
+	"servicos": [
+		{
+			"cargo": "name",
+			"descricao": "desc",
+			"empregrador": {
+				"nome": "sad",
+				"ip": "10.10.10.10",
+				"porta": 22000
+			},
+			"salario": "200.02"
+		}
+	]
+}
+
+ - Cadastro de Serviços
+{
+	"action": "cadastrarServico",
+	"servico": {
+		"cargo": "name",
+		"descricao": "desc",
+		"salario": "200.02"
+	}
+}
+
+ - Chat Global (Mensagem em Broadcast)
+ {
+ 	"action": "broadcast",
+ 	"mensagem": "msg"
+ }
+ 
+ === CLASSE JAVA SERVICO ===
+ 
+ public class Servico {
+    private String cargo;
+    private String descricao;
+    private float salario;
+    private User empregador;
+}
